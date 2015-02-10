@@ -6,12 +6,12 @@
 Summary:	Library for generic document converters
 Summary(pl.UTF-8):	Biblioteka dla ogólnych konwerterów dokumentów
 Name:		librevenge
-Version:	0.0.1
+Version:	0.0.2
 Release:	1
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
-# Source0-md5:	7c397d6eb39d906dacacd74cc1f0d749
+# Source0-md5:	4ee55a80ee32af6752dd8c56eb1b1b5e
 URL:		https://sourceforge.net/p/libwpd/wiki/librevenge/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
