@@ -2,12 +2,12 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 %bcond_without	gdb		# GDB pretty printers
-#
+
 Summary:	Library for generic document converters
 Summary(pl.UTF-8):	Biblioteka dla ogólnych konwerterów dokumentów
 Name:		librevenge
 Version:	0.0.2
-Release:	2
+Release:	3
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
@@ -66,6 +66,9 @@ Statyczna biblioteka librevenge.
 Summary:	API documentation for librevenge library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki librevenge
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API documentation for librevenge library.
@@ -106,7 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/librevenge-*.la
 
 %if %{with gdb}
