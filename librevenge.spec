@@ -16,6 +16,7 @@ URL:		https://sourceforge.net/p/libwpd/wiki/librevenge/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	boost-devel >= 1.20
+BuildRequires:	cppunit-devel
 BuildRequires:	doxygen
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:2
