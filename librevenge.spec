@@ -67,9 +67,7 @@ Statyczna biblioteka librevenge.
 Summary:	API documentation for librevenge library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki librevenge
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API documentation for librevenge library.
