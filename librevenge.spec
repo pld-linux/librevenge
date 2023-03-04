@@ -23,6 +23,7 @@ BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 %{?with_gdb:BuildRequires:	python}
 %{?with_gdb:BuildRequires:	python-modules}
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.234
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
