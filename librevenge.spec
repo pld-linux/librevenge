@@ -6,19 +6,19 @@
 Summary:	Library for generic document converters
 Summary(pl.UTF-8):	Biblioteka dla ogólnych konwerterów dokumentów
 Name:		librevenge
-Version:	0.0.4
-Release:	2
+Version:	0.0.5
+Release:	1
 License:	MPL v2.0 or LGPL v2.1+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
-# Source0-md5:	2677cf97716c699146f999575ac0147d
+Source0:	https://downloads.sourceforge.net/libwpd/%{name}-%{version}.tar.xz
+# Source0-md5:	c6e629dfb9557a6a2cd4309b31eddfa8
 URL:		https://sourceforge.net/p/libwpd/wiki/librevenge/
 BuildRequires:	autoconf >= 2.65
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	boost-devel >= 1.20
 BuildRequires:	cppunit-devel
 BuildRequires:	doxygen
-BuildRequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig
 %{?with_gdb:BuildRequires:	python-modules}
@@ -43,7 +43,7 @@ Summary:	Header files for librevenge library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki librevenge
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	libstdc++-devel
+Requires:	libstdc++-devel >= 6:4.7
 
 %description devel
 Header files for librevenge library.
@@ -159,8 +159,8 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with gdb}
 %files gdb
 %defattr(644,root,root,755)
-%{_datadir}/gdb/auto-load/%{_libdir}/librevenge-0.0.py
-%{_datadir}/gdb/auto-load/%{_libdir}/librevenge-stream-0.0.py
+%{_datadir}/gdb/auto-load/%{_libdir}/librevenge-0.0-gdb.py
+%{_datadir}/gdb/auto-load/%{_libdir}/librevenge-stream-0.0-gdb.py
 %dir %{_datadir}/librevenge
 %{_datadir}/librevenge/python
 %endif
